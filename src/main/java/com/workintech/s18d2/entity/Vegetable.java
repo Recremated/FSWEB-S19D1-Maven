@@ -18,12 +18,12 @@ public class Vegetable {
     private Double price;
 
     @Column(name = "grown_on_tree")
-    private boolean grownOnTree;
+    private Boolean grownOnTree;
 
     // Constructors
     public Vegetable() {}
 
-    public Vegetable(String name, Double price, boolean grownOnTree) {
+    public Vegetable(String name, Double price, Boolean grownOnTree) {
         this.name = name;
         this.price = price;
         this.grownOnTree = grownOnTree;
@@ -54,11 +54,19 @@ public class Vegetable {
         this.price = price;
     }
 
-    public boolean isGrownOnTree() {
+    public Boolean getGrownOnTree() {
         return grownOnTree;
     }
 
-    public void setGrownOnTree(boolean grownOnTree) {
+    public Boolean getIsGrownOnTree() {
+        return grownOnTree;
+    }
+
+    public boolean isGrownOnTree() {
+        return grownOnTree != null ? grownOnTree : false;
+    }
+
+    public void setGrownOnTree(Boolean grownOnTree) {
         this.grownOnTree = grownOnTree;
     }
 }

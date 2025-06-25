@@ -67,7 +67,8 @@ public class VegetableController {
     }
 
     private void validateVegetableData(Vegetable vegetable) {
-        if (vegetable.getName() == null || vegetable.getName().isEmpty() || vegetable.getPrice() == null || vegetable.getIsGrownOnTree() == null) {
+        if (vegetable.getName() == null || vegetable.getName().isEmpty() ||
+                vegetable.getPrice() == null || vegetable.getGrownOnTree() == null) {
             throw new InvalidInputException("Missing required vegetable data.");
         }
     }
